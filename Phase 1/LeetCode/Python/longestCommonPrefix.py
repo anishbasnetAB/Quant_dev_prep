@@ -22,7 +22,7 @@
 def longest_common_prefix(strs):
     if not strs:
         return ""
-
+    print( strs[1:])
     # Check each letter one by one
     for i in range(len(strs[0])):
         letter = strs[0][i]
