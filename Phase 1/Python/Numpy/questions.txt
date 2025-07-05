@@ -1,0 +1,125 @@
+
+
+# ✅ **NumPy Practice Questions (With Use Cases)**
+
+## 🧩 **Level 1 – Basics (Arrays, Indexing, Slicing)**
+
+1. **Create a NumPy array** with integers from 1 to 20. Reshape it into a 4x5 matrix.
+2. Extract the **third row** and the **second column** of the matrix created above.
+3. Set all **even elements** of the matrix to `0`.
+4. Reverse the rows and columns of the matrix using slicing.
+5. Convert a 1D array to a **column vector** and then a **row vector**.
+
+---
+
+## 🧩 **Level 2 – Array Operations + Aggregations**
+
+6. Generate a 5x3 array of **random normal returns**. Calculate:
+
+   * Mean return per column
+   * Standard deviation per row
+   * Overall average
+
+7. Given an array of stock prices:
+
+   ```python
+   prices = np.array([100, 105, 103, 110, 108])
+   ```
+
+   Calculate:
+
+   * Daily returns as percentage
+   * Cumulative return
+
+8. Create a 5x5 identity matrix. Multiply it by 7 using broadcasting.
+
+9. Create a 2D array with shape (4, 3) and subtract **column-wise means** using broadcasting.
+
+---
+
+## 🧩 **Level 3 – Broadcasting + Dot Product**
+
+10. Given:
+
+    ```python
+    returns = np.array([[0.01, -0.02, 0.015],
+                        [0.012, 0.01, -0.005]])
+    weights = np.array([0.5, 0.3, 0.2])
+    ```
+
+    * Calculate portfolio returns for each day using broadcasting or dot product.
+    * What shape should the result be?
+
+11. Given:
+
+    ```python
+    arr = np.array([[1], [2], [3]])
+    row = np.array([10, 20, 30])
+    ```
+
+    * Use broadcasting to generate a matrix where each row in `arr` is added to the entire `row`.
+
+12. Create a 3D tensor of shape (2, 3, 4) filled with random integers. Multiply it with a 1D array of shape (4,) using broadcasting. What is the resulting shape?
+
+---
+
+## 🧩 **Level 4 – Quant-Specific Problems**
+
+13. Simulate 1000 days of return data for 3 assets. Calculate:
+
+* Portfolio return given weights `[0.4, 0.4, 0.2]`
+* 30-day rolling Sharpe Ratio (use risk-free rate = 0)
+
+14. You have a matrix of shape (1000, 3) of asset prices. Compute:
+
+* Log returns using `np.log(prices[1:] / prices[:-1])` (use slicing)
+* Normalize each column using broadcasting (zero mean, unit std)
+
+15. Given:
+
+    ```python
+    vol = np.array([[0.1], [0.2], [0.3]])  # shape (3, 1)
+    time = np.array([1, 2, 3])            # shape (3,)
+    ```
+
+    Compute the implied volatility surface using `vol * np.sqrt(time)` via broadcasting.
+
+---
+
+## 🧩 **Level 5 – Advanced Challenges**
+
+16. Implement a function:
+
+    ```python
+    def normalize_rows(X):
+        ...
+    ```
+
+    that subtracts row mean and divides by row std dev — using only broadcasting.
+
+17. Implement a **correlation matrix** from a returns matrix using only NumPy (no pandas).
+
+18. Given a (1000, 10) matrix of simulated returns, write a function to compute:
+
+    * Rolling 60-day volatility per asset
+    * Rolling beta of asset 0 against asset 1
+
+19. Write a `portfolio_simulation()` function that:
+
+    * Accepts `n_days`, `n_assets`, and `weights`
+    * Simulates normal returns
+    * Outputs portfolio returns and rolling Sharpe ratio
+
+20. Given a 3D tensor of shape (100, 5, 5) representing time-series of 5x5 matrices:
+
+    * Calculate the average matrix across all time steps (axis=0)
+
+---
+
+Would you like:
+
+* A **PDF worksheet** with these problems?
+* **Solutions + explanations** for all levels?
+* **Colab/Jupyter notebook** to work through them interactively?
+
+Let me know how you want to practice!
