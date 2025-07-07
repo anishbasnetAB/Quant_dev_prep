@@ -1,0 +1,59 @@
+Got it — that's definitely the root cause. Since your Git email doesn’t match a **verified email on your GitHub account**, your contributions won’t show up on the contribution graph, even though you're committing and pushing correctly.
+
+---
+
+### ✅ Here's How to Fix It:
+
+#### 1. **Set the Correct Email**
+
+Run this in your terminal (replace with your actual verified GitHub email):
+
+```bash
+git config --global user.email "your_verified_email@example.com"
+```
+
+If you want to apply it only to the current repo:
+
+```bash
+git config user.email "your_verified_email@example.com"
+```
+
+---
+
+#### 2. **Fix Past Commits (Optional but Useful)**
+
+If you want your previous commits to count in the contribution graph, you’ll need to **rewrite history** with the correct email. Here's how:
+
+**⚠️ Warning**: This changes history — do it only if you're the only one working on the repo or you're okay with force pushing.
+
+Run:
+
+```bash
+git rebase -i HEAD~10  # or however many commits you want to fix
+```
+
+In the interactive menu:
+
+* Change `pick` to `edit` for each commit you want to fix.
+* For each one, run:
+
+  ```bash
+  git commit --amend --author="Your Name <your_verified_email@example.com>"
+  git rebase --continue
+  ```
+
+After fixing all commits, force push:
+
+```bash
+git push --force
+```
+
+---
+
+#### 3. **Check Contribution Graph**
+
+Give GitHub a few minutes — your green squares should appear after syncing.
+
+---
+
+Would you like help rewriting the previous commits with the right email? I can guide you step by step.
