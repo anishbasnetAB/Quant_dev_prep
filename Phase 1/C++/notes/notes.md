@@ -1,5 +1,3 @@
-Here's a **full lesson on C++ compilers**, how to **run C++ in VS Code**, how to **set up `tasks.json` properly**, and a **comparison of Clang and GCC**. This will be a comprehensive beginner-to-intermediate level guide.
-
 ---
 
 # 📘 Full C++ Compiler & VS Code Setup Guide
@@ -254,8 +252,6 @@ In your `tasks.json`:
 
 ---
 
-If you'd like, I can auto-generate a starter project zip file with proper `tasks.json`, sample code, and cross-platform setup. Would you like that?
-
 
 ---
 
@@ -462,12 +458,6 @@ void sayHello() {
 | Linker        | Always define declared functions           |
 
 ---
-
-## 🧪 Try It Yourself!
-
-Would you like to get a quiz or some practice questions on these errors to test your understanding?
-
-Let me know if you want this lesson as a downloadable PDF or integrated with examples in a C++ environment.
 
 
 ---
@@ -808,8 +798,7 @@ Example:
 ...
 ```
 
-* These lines are stored **sequentially** in memory for execution.
-* The **yellow arrow** (instruction pointer) shows the **current instruction** the CPU is executing.
+
 
 ---
 
@@ -892,7 +881,6 @@ This diagram is a great **visualization of how a program executes at a low level
 
 ---
 
-Understanding the **C++ execution model** and **memory model** is crucial for writing efficient and safe C++ programs. Here's a **detailed and visual-friendly explanation**, structured clearly:
 
 ---
 
@@ -1236,4 +1224,3 @@ For **large projects or headers**, it's better to **use `std::` explicitly**.
 * Use `std::` to access items like `cout`, `cin`, `vector`, etc.
 * Avoid global `using namespace std;` in large codebases for safety.
 
-Would you like a visual diagram of `std` and how namespaces work under the hood?
